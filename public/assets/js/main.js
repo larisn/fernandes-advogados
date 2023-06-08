@@ -1,0 +1,1 @@
+// carregar dinamicamente o conteúdo do blog do servidor e inserir ele na seção do blog. com fetch api
