@@ -17,59 +17,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- favicon -->
-  <!-- <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"> -->
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
   <!-- style -->
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- lib scroll reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
-  <title>Fernandes Advogados - Soluções jurídicas personalizadas para você</title>
+  <title>Fernandes Advogados | Soluções jurídicas personalizadas para você</title>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="brand">
-      </div>
+  <header class="navbar transparent-nav">
+    <div class="container">
+      <nav>
+        <img class="brand" src="assets/img/brand.png" alt="brand">
 
-      <ul>
-        <li>
-          <a href="#s-home" rel="noopener">Home</a>
-        </li>
-
-        <li>
-          <a href="#s-about" rel="noopener">Sobre nós</a>
-        </li>
-
-        <li>
-          <a href="#s-services" rel="noopener">Serviços</a>
-        </li>
-
-        <li>
-          <a href="#s-blog" rel="noopener">Blog</a>
-        </li>
-
-        <li>
-          <a href="#s-contact-questions" rel="noopener">Contato</a>
-        </li>
-      </ul>
-    </nav>
-
-    <nav class="mobile-navbar">
-      <div class="content-mobile-navbar">
-        <div class="brand">
+        <div class="nav-mobile">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
 
-        <div id="nav-mobile">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-
-      <div>
-        <ul id="nav-mobile-options">
+        <ul class="nav-list">
           <li>
             <a href="#s-home" rel="noopener">Home</a>
           </li>
@@ -90,28 +60,192 @@
             <a href="#s-contact-questions" rel="noopener">Contato</a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
+
+    <a href="#">
+      <button id="fixed-button-whatsapp">
+        <img src="assets/img/icons/whatsapp.svg" alt="icon whatsapp">Contate-nos
+      </button>
+    </a>
   </header>
 
   <main>
     <section id="s-home">
+      <img class="mask-home" src="assets/img/mask.svg" alt="mask">
+
       <div class="container">
+        <div class="container-text-home">
+          <span>Por um Sistema Judiciário Melhor</span>
+          <h1>Referência em <b>Concursos Públicos</b> por todo Brasil</h1>
+          <p>
+            Somos um escritório de advocacia com foco em concursos públicos, com experiência e apaixonados pela justiça. Oferecemos
+            soluções jurídicas personalizadas para atender às necessidades únicas
+            de cada cliente.
+          </p>
+
+          <a href="#s-about">
+            <button>Saber mais</button>
+          </a>
+        </div>
+
+        <div class="container-cards-home">
+          <div>
+            <img src="assets/img/icons/law.svg" alt="martelo do juíz">
+            <h2>Consulta Grátis</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.
+            Sem morbi pellentesque varius tellus.</p>
+          </div>
+
+          <div>
+            <img src="assets/img/icons/law.svg" alt="martelo do juíz">
+            <h2>Advocacia Pessoal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.
+              Sem morbi pellentesque varius tellus.</p>
+          </div>
+
+          <div>
+            <img src="assets/img/icons/law.svg" alt="martelo do juíz">
+            <h2>Conselho Profissional</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.
+              Sem morbi pellentesque varius tellus.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="s-about">
       <div class="container">
+        <div class="container-text-about">
+          <span>Sobre nós</span>
+          <h1>Fernandes Advogados</h1>
+          <h2>
+            Lorem ipsum dolor sit amet consectetur. Porta
+            et lacus dolor elit eu. Proin interdum condim.
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Euismod
+            aliquam sit in amet aenean. Velit vulputate egestas
+            quis bibendum. Sollicitudin nec tortor laoreet duis
+            aliquam ut aliquet sit. Etiam tortor dignissim vitae
+            orci. Sit purus nisl ultricies facilisis.
+            Lorem ipsum dolor sit amet consectetur. Euismod
+            aliquam sit in amet aenean. Velit vulputate egestas
+            quis bibendum. Sollicitudin nec tortor laoreet duis
+            aliquam ut aliquet sit. Etiam tortor dignissim vitae
+            orci. Sit purus nisl ultricies facilisis.
+          </p>
+          <button>Consulte-nos</button>
+        </div>
+
+        <div class="container-photo-about">
+          <img src="assets/img/img-lawyers.png" alt="lawyers">
+        </div>
       </div>
     </section>
 
     <section id="s-services">
       <div class="container">
+        <div class="container-services">
+          <span>Nossos Serviços</span>
+          <h1>Nossas áreas de atuação</h1>
+        </div>
+
+        <div class="container-services-cards">
+          <article>
+            <img src="assets/img/icons/security.svg" alt="#">
+            <div>
+              <h2>Segurança Corporativa</h2>
+              <p>Lorem ipsum dolor sit amet consectetur.
+              Sit volutpat condimentum hac mattis ac facili rhoncus sit dictum. Risus habitasse ultricies.</p>
+            </div>
+          </article>
+
+          <article>
+            <img src="assets/img/icons/personal-damage.svg" alt="#">
+            <div>
+              <h2>Danos Pessoais</h2>
+              <p>Lorem ipsum dolor sit amet consectetur.
+                Sit volutpat condimentum hac mattis ac facili rhoncus sit dictum. Risus habitasse ultricies.</p>
+            </div>
+          </article>
+
+          <article>
+            <img src="assets/img/icons/security.svg" alt="#">
+            <div>
+              <h2>Segurança Corporativa</h2>
+              <p>Lorem ipsum dolor sit amet consectetur.
+                Sit volutpat condimentum hac mattis ac facili rhoncus sit dictum. Risus habitasse ultricies.</p>
+            </div>
+          </article>
+
+          <article>
+            <img src="assets/img/icons/personal-damage.svg" alt="#">
+            <div>
+              <h2>Danos Pessoais</h2>
+              <p>Lorem ipsum dolor sit amet consectetur.
+                Sit volutpat condimentum hac mattis ac facili rhoncus sit dictum. Risus habitasse ultricies.</p>
+            </div>
+          </article>
+
+          <div class="hidden-cards">
+            <article>
+              <img src="assets/img/icons/security.svg" alt="#">
+              <div>
+                <h2>Segurança Corporativa</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.
+                  Sit volutpat condimentum hac mattis ac facili rhoncus sit dictum. Risus habitasse ultricies.</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/img/icons/personal-damage.svg" alt="#">
+              <div>
+                <h2>Danos Pessoais</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.
+                  Sit volutpat condimentum hac mattis ac facili rhoncus sit dictum. Risus habitasse ultricies.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <button class="show-cards">
+          <h3>Ver todas as áreas</h3>
+          <img src="assets/img/icons/arrow-right.svg" alt="arrow to right">
+        </button>
       </div>
     </section>
 
     <section id="s-benefits">
       <div class="container">
+        <div class="content-benefits">
+          <div>
+            <span>Nossas Vantagens</span>
+            <h1>Por que nos escolher?</h1>
+          </div>
+
+          <div class="container-benefits-values">
+            <div>
+              <h2>210</h2>
+              <p>Lorem Ipsum</p>
+            </div>
+
+            <div>
+              <h2>195</h2>
+              <p>Lorem Ipsum</p>
+            </div>
+
+            <div>
+              <h2>50</h2>
+              <p>Lorem Ipsum</p>
+            </div>
+
+            <div>
+              <h2>24</h2>
+              <p>Lorem Ipsum</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -133,6 +267,7 @@
 
   <script src="assets/js/nav.js"></script>
   <script src="assets/js/scrollReveal.js"></script>
+  <script src="assets/js/showCards.js"></script>
   
 </body>
 </html>

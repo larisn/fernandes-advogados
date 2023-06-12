@@ -1,0 +1,125 @@
+
+#s-services {
+  background-color: $blue-bg-sec3;
+  padding: 15rem 4rem 16rem 4rem;
+  .container {
+    @include container();
+  }
+}
+
+.container-services {
+  text-align: center;
+  span {
+    text-transform: uppercase;
+    font: 300 1.8rem $font-main;
+    color: $salmon;
+    letter-spacing: 5px;
+  }
+  h1 {
+    font: 900 5.5rem $font-main;
+    color: $white2;
+    position: relative;
+    margin: 2rem 0 4.5rem 0;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      top: 110px;
+      background-color: $salmon;
+      width: 90px;
+      text-align: center;
+      margin: 0 auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include responsive-tablet() {
+      font-size: 4.8rem;
+    }
+    @include responsive-mobile() {
+      line-height: 65px;
+      font-size: 4rem;
+    }
+  }
+}
+
+.container-services-cards {
+  display: flex;
+  gap: 35px;
+  min-height: auto;
+  flex-wrap: wrap;
+  padding-top: 15rem;
+  @include responsive-mobile {
+    padding-top: 10rem;
+  }
+  article {
+    width: 48%;
+    display: flex;
+    gap: 25px;
+    flex-grow: 1;
+    border-radius: 2px;
+    padding: 7rem 3rem 7rem 4rem;
+    background-color: $blue-card-sec3-footer;
+    border: 2px solid $blue-card-stroke-sec3;
+    @include responsive-tablet {
+      flex-wrap: wrap;
+    }
+    &:nth-child(2) {
+      position: relative;
+    }
+    img {
+      width: 55px;
+      height: 55px;
+      transform: translateY(-7px);
+    }
+    h2 {
+      color: $white2;
+      font: 600 2.2rem $font-main;
+    }
+    p {
+      color: $white4;
+      
+      margin-top: 2.2rem;
+      font-size: 1.6rem;
+      line-height: 30px;
+      font-weight: 300;
+    }
+  }
+}
+
+.show-cards {
+  @include flexbox-center;
+  width: 255px;
+  height: 65px;
+  color: $white1;
+  background-color: $salmon;
+  padding: 1.3rem;
+  margin: 0 auto;
+  border-radius: 3px;
+  margin-top: 8rem;
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  img {
+    width: 23px;
+    margin-left: 15px;
+    transform: translateY(1px);
+  }
+  &:hover {
+    background: transparent;
+    border: 2px solid $salmon-stroke;
+    transition: all .4s ease-in-out;
+    animation: pulse 1.5s infinite;
+  }
+}
+
+.hidden-cards {
+  display: none;
+}
+
+.visible {
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+

@@ -1,29 +1,24 @@
 
 // media queries
 
-@mixin responsive-small-mobile {
-  @media screen and (min-width: 0px) and (max-width: 320px) {
+@mixin responsive-mobile {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
 
 @mixin responsive-tablet {
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 992px) {
     @content;
   }
 }
 
 @mixin responsive-desktop {
-  @media screen and (min-width: 1135px) {
+  @media screen and (max-width: 1200px) {
     @content;
   }
 }
 
-@mixin responsive-desktop-hd {
-  @media screen and (min-width: 1440px) {
-    @content;
-  }
-}
 
 
 // position elements
@@ -46,6 +41,6 @@
 }
 
 @mixin container() {
-  max-width: 1400px;
+  max-width: 1350px;
   margin: 0 auto;
 }

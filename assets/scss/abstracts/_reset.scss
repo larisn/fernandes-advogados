@@ -6,8 +6,7 @@
   font-family: $font-secondary;
 }
 
-ul,
-ol {
+ul, ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -15,7 +14,26 @@ ol {
 
 a {
   text-decoration: none;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -20px;
+    left: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  &:hover {
+    color: $salmon;
+    &::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
 }
+
 
 img {
   max-width: 100%;
@@ -23,18 +41,11 @@ img {
   display: block;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-button,
-input {
+button, input {
   border: 0;
   font-family: $font-secondary;
   background: none;
@@ -42,8 +53,6 @@ input {
   color: inherit;
   font-weight: 400;
   font-size: 1.6rem;
-  width: 100%;
-
   &:focus {
     border: none;
   }

@@ -1,0 +1,104 @@
+
+header {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  background-color: $blue-nav;
+  transition: background-color 0.3s ease-in-out;
+  padding: 2.2rem;
+  .container {
+    nav {
+      @include container();
+      @include flexbox-between();
+      padding: 0 .8rem;
+      img {
+        width: 140px;
+      }
+      .nav-list {
+        display: flex;
+        gap: 40px;
+        li {
+          a {
+            color: $white-nav;
+            position: relative;
+            font-size: 1.8rem;
+            &:hover {
+              color: $salmon;
+            }
+            &::before {
+              background-color: $salmon;
+              bottom: -51px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.solid-nav {
+  background-color: $blue-bg-nav-mobile;
+}
+
+.nav-mobile {
+  display: none;
+  div {
+    transition-duration: 0.5s;
+    margin: 6px 0;
+    width: 28px;
+    height: 2px;
+    background-color: $salmon;
+    transition: .4s;
+  }
+  &.active .line1 {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  &.active .line2 {
+    opacity: 0;
+  }
+  &.active .line3 {
+    transform: rotate(-46deg) translate(3px, -4px);
+  }
+}
+
+.nav-list.visible {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+}
+
+@include responsive-tablet() {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    text-align: center;
+    position: absolute;
+    top: 128px;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: $blue-bg-nav-mobile;
+    flex-direction: column;
+    padding-top: 40px;
+    visibility: hidden;
+  }
+  header .container nav .nav-list li {
+    margin-bottom: 1rem;
+    a {
+      font-size: 2rem;
+      &::before {
+        background-color: $salmon;
+        bottom: -15px;
+      }
+    }
+    &:first-child {
+      margin-top: 6rem;
+    }
+  }
+  .nav-mobile {
+    display: block;
+  }
+}
