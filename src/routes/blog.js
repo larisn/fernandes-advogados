@@ -1,0 +1,1 @@
+// fornecer os dados dos posts do blog.
