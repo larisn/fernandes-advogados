@@ -1,7 +1,7 @@
 
 #s-about {
   background-color: $bg-white;
-  padding: 30rem 4rem 16rem 4rem;
+  padding: 37rem 4rem 18rem 4rem;
   @include responsive-tablet() {
     padding-top: 20rem;
   }
@@ -15,7 +15,7 @@
       flex-wrap: wrap;
     }
     img {
-      width: 550px;
+      width: 580px;
       @include responsive-mobile() {
         width: 400px;
         margin-top: 3rem;
