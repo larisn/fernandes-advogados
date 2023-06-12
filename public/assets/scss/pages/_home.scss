@@ -1,0 +1,185 @@
+
+#s-home {
+  background: url(/public/assets/img/bg-home.jpg) no-repeat center 40% / cover;
+  height: 110vh;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: $blue-home-mask;
+  }
+  @include responsive-tablet() {
+    height: 140vh;
+  }
+  @include responsive-mobile() {
+    height: 100%;
+  }
+  .container {
+    @include container();
+    position: relative;
+    padding: 24rem 4rem 0 4rem;
+    z-index: 2;
+    text-align: center;
+    @include responsive-tablet() {
+      padding: 22rem 2.5rem 6rem 2.5rem;
+    }
+  }
+}
+
+.container-text-home {
+  span {
+    color: $white2;
+    letter-spacing: 9px;
+    word-spacing: 5px;
+    font-size: 2rem;
+    font-weight: 300;
+    @include responsive-tablet() {
+      font-size: 1.6rem;
+    }
+  }
+  h1 {
+    font-family: $font-main;
+    font-weight: 900;
+    color: $white1;
+    font-size: 7.5rem;
+    max-width: 970px;
+    line-height: 110px;
+    text-align: left;
+    margin: .8rem auto 0 auto;
+    b {
+      color: $salmon;
+      font-family: $font-main;
+      font-weight: 900;
+    }
+    @include responsive-tablet() {
+      font-size: 4.74rem;
+      line-height: 65px;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    @include responsive-mobile() {
+      text-align: left;
+    }
+  }
+  p {
+    color: $white2;
+    max-width: 1050px;
+    text-align: left;
+    margin: 3rem auto 4rem auto;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 37px;
+    
+    @include responsive-tablet() {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+    @include responsive-mobile() {
+      text-align: left;
+    }
+  }
+  button {
+    border: 2px solid $salmon-stroke;
+    width: 200px;
+    font-size: 2rem;
+    background-color: $salmon;
+    padding: 1.3rem;
+    border-radius: 3px;
+    color: $white1;
+    &:hover {
+      background: transparent;
+      transition: all .4s ease-in-out;
+      animation: pulse 1.5s infinite;
+    }
+  }
+}
+
+.container-cards-home {
+  @include flexbox-center();
+  gap: 8px;
+  margin-top: 13rem;
+  @include responsive-tablet() {
+    flex-wrap: wrap;
+  }
+  
+  img {
+    margin: 0 auto;
+    width: 40px;
+    padding-top: 6rem;
+    margin-bottom: 2.5rem;
+  }
+  p {
+    max-width: 270px;
+    margin: 0 auto;
+  }
+  div {
+    width: 350px;
+    height: 320px;
+    h2 {
+      font-family: $font-main;
+      font-weight: 600;
+      &::after {
+        content: "";
+        background-color: $salmon;
+        width: 75px;
+        height: 2px;
+        display: flex;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2.8rem 0;
+      }
+    }
+    &:nth-child(1) {
+      background-color: $blue-card1;
+      h2 {
+        color: $white1;
+      }
+    }
+    &:nth-child(2) {
+      background-color: $blue-card2;
+      h2 {
+        color: $salmon;
+        &::after {
+          background-color: $white2;
+        }
+      }
+    }
+    &:nth-child(3) {
+      background-color: $blue-card3;
+      h2 {
+        color: $white2;
+      }
+    }
+    p {
+      color: $white2;
+      line-height: 24px;
+    }
+  }
+}
+
+.mask-home {
+  position: sticky;
+  top: 1010px;
+  width: 100%;
+  z-index: 1;
+  @include responsive-tablet() {
+    display: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 $salmon;
+  }
+  70% {
+    box-shadow: 0 0 0 10px #ae333300;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #ae333300;
+  }
+}

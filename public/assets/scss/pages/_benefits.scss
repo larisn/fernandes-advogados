@@ -1,0 +1,87 @@
+
+#s-benefits {
+  background: url(/public/assets/img/bg-home.jpg) no-repeat center 1% / cover fixed;
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: $blue-home-mask;
+  }
+  .container {
+    @include container();
+    padding: 15rem 4rem 16rem 4rem;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.content-benefits {
+  text-align: center;
+  span {
+    text-transform: uppercase;
+    font: 300 1.8rem $font-main;
+    color: $salmon;
+    letter-spacing: 5px;
+  }
+  h1 {
+    font: 900 5.5rem $font-main;
+    color: $white2;
+    position: relative;
+    margin: 2rem 0 4.5rem 0;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      top: 110px;
+      background-color: $salmon;
+      width: 90px;
+      text-align: center;
+      margin: 0 auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include responsive-tablet() {
+      font-size: 4.8rem;
+    }
+    @include responsive-mobile() {
+      line-height: 65px;
+      font-size: 4rem;
+    }
+  }
+}
+
+.container-benefits-values {
+  display: flex;
+  gap: 80px;
+  margin-top: 15rem;
+  @include responsive-tablet {
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  div {
+    border-right: 2px solid $salmon;
+    padding-right: 13rem;
+    padding: 0 9.5rem 0 3rem;
+    &:last-child {
+      padding-right: 0;
+      border: none;
+    }
+    h2 {
+      font: 500 8rem $font-main;
+      color: $white2;
+      margin-bottom: 2rem;
+    }
+    p {
+      font: 300 1.8rem $font-main;
+      color: $white2;
+      letter-spacing: 3px;
+    }
+  }
+}
