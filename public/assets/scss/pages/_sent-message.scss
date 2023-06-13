@@ -1,0 +1,73 @@
+html {
+  background-color: $bg-white;
+}
+
+main {
+  flex-grow: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container-sent-message {
+  background-color: $blue-bg-left-side;
+  width: 650px;
+  height: 400px;
+  margin: 10rem auto;
+  padding: 3rem;
+  @include responsive-tablet() {
+    width: 600px;
+    height: 400px;
+  }
+  @include responsive-mobile {
+    width: 350px;
+    height: 400px;
+  }
+  h1 {
+    color: $white2;
+    font-weight: 600;
+    font-size: 3.5rem;
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  h2 {
+    color: $white3;
+    font-weight: 400;
+    font-size: 1.8rem;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 35px;
+  }
+  button {
+    border: 2px solid $salmon-stroke;
+    width: 200px;
+    font-size: 2rem;
+    background-color: $salmon;
+    padding: 1.3rem;
+    border-radius: 3px;
+    margin: 4rem 0 6rem 18.5rem;
+    a {
+      color: $white1;
+    }
+    &:hover {
+      background: transparent;
+      transition: all .4s ease-in-out;
+      animation: pulse 1.5s infinite;
+    }
+    @include responsive-tablet {
+      margin-left: 16rem;
+    }
+    @include responsive-mobile {
+      margin: 0;
+      margin-top: 2rem;
+    }
+  }
+}
+
+footer {
+  background-color: $bg-white;
+}
