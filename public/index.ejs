@@ -31,7 +31,9 @@
   <header class="navbar transparent-nav">
     <div class="container">
       <nav>
-        <img class="brand" src="assets/img/brand.png" alt="brand">
+        <a href="#">
+          <img class="brand" src="assets/img/brand.png" alt="brand">
+        </a>
 
         <div class="nav-mobile">
           <div class="line1"></div>
@@ -256,18 +258,202 @@
 
     <section id="s-contact-questions">
       <div class="container">
+        <div class="container-card">
+          <div class="container-title">
+            <span>Alguma Pergunta?</span>
+            <h1>Perguntas Frequentes</h1>
+          </div>
+
+          <article>
+            <div class="container-questions">
+              <div class="accordion-header">
+                <span class="question">
+                  <h2>Porque devo confiar em sua empresa para o meu caso?</h2>
+                </span>
+
+                <img src="assets/img/icons/plus.svg" alt="plus">
+              </div>
+
+              <div class="answer closed">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti non saepe earum, numquam quam exercitationem.</p>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div class="container-questions">
+              <div class="accordion-header">
+                <span class="question">
+                  <h2>Com que tipos de casos seu escritório lida?</h2>
+                </span>
+
+                <img src="assets/img/icons/plus.svg" alt="plus">
+              </div>
+
+              <div class="answer closed">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti non saepe earum, numquam quam exercitationem.</p>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div class="container-questions">
+              <div class="accordion-header">
+                <span class="question">
+                  <h2>Qual é o horário de funcionamento?</h2>
+                </span>
+
+                <img src="assets/img/icons/plus.svg" alt="plus">
+              </div>
+
+              <div class="answer closed">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti non saepe earum, numquam quam exercitationem.</p>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div class="container-questions">
+              <div class="accordion-header">
+                <span class="question">
+                  <h2>As consultas são cobradas?</h2>
+                </span>
+
+                <img src="assets/img/icons/plus.svg" alt="plus">
+              </div>
+        
+              <div class="answer closed">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti non saepe earum, numquam quam exercitationem.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        
+        <div class="container-contact">
+          <div class="container-title title-contact">
+            <span>Contato</span>
+            <h1>Agende uma consulta</h1>
+          </div>
+
+          <form action="https://formsubmit.co/atendimento@fernandesadvogados.app.br" method="POST" id="contact" autocomplete="off">
+            <ul>
+              <div>
+                <li>
+                  <input type="text" name="name" placeholder="Seu nome" required>
+                </li>
+
+                <li>
+                  <input type="email" name="email" placeholder="Seu e-mail" required>
+                </li>
+              </div>
+
+              <div>
+                <li>
+                  <input type="tel" id="phone" name="phone" placeholder="DDD + Celular" required>
+                </li>
+                
+                <li>
+                  <input type="text" name="subject" placeholder="Assunto" required>
+                </li>
+              </div>
+          
+              <li>
+                <input class="input-message" type="text" name="message" placeholder="Sua mensagem" required>
+              </li>
+          
+              <li class="container-button-submit">
+                <div>
+                  <input class="button-submit" name="submit" type="submit" value="Enviar mensagem">
+                  <img src="assets/img/icons/arrow-right.svg" alt="arrow right">
+                </div>
+              </li>
+          
+              <li>
+                <input type="hidden" name="_next" value="https://fernandesadvogados.app.br/sent-message.html">
+                <input type="hidden" name="_captcha" value="false">
+              </li>
+            </ul>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
+      <div class="container-columns">
+        <div>
+          <img src="assets/img/brand.png" alt="brand">
+          <p>Oferecemos soluções jurídicas personalizadas para atender às necessidades únicas de cada cliente.</p>
+          <a href="#">
+            <img src="assets/img/icons/whatsapp.svg" alt="icon whatsapp">
+            Atendimento
+          </a>
+          <a href="#">
+            <img src="assets/img/icons/whatsapp.svg" alt="icon whatsapp">
+            Jurídico
+          </a>
+        </div>
+
+        <div>
+          <h1>Menu</h1>
+          <ul>
+            <li>
+              <a href="#s-home">Home</a>
+            </li>
+            <li>
+              <a href="#s-about">Sobre nós</a>
+            </li>
+            <li>
+              <a href="#s-services">Serviços</a>
+            </li>
+            <li>
+              <a href="#s-blog">Blog</a>
+            </li>
+            <li>
+              <a href="#s-contact-questions">Contato</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="container-column3">
+          <h1>Informações de contato</h1>
+          <h3>Entre em contato conosco e deixe-nos ajudar a defender seus interesses.</h3>
+          <div>
+            <img src="assets/img/icons/world.svg" alt="icon world">
+            <p></p>
+          </div>
+
+          <div>
+            <img src="assets/img/icons/phone.svg" alt="icon phone">
+            <p>+55 83 8897-2233 | +55 83 8781-2233</p>
+          </div>
+        
+          <div>
+            <img src="assets/img/icons/email.svg" alt="icon email">
+            <p></p>
+          </div>
+
+          <div>
+            <img src="assets/img/icons/clock.svg" alt="icon clock">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-footer">
+      <p>
+        © Copyright 2023. Todos os direitos reservados
+      </p>
     </div>
   </footer>
 
   <script src="assets/js/nav.js"></script>
   <script src="assets/js/scrollReveal.js"></script>
   <script src="assets/js/showCards.js"></script>
-  
+  <script src="assets/js/accordion.js"></script>
+  <script src="assets/js/phone-number.js"></script>
 </body>
 </html>

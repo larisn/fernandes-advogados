@@ -67,6 +67,7 @@
       color: $white1;
       background-color: $salmon;
       padding: 1.3rem;
+      z-index: -1;
       border-radius: 3px;
       &:hover {
         background: transparent;

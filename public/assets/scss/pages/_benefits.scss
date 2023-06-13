@@ -2,7 +2,7 @@
 #s-benefits {
   background: url(/public/assets/img/bg-home.jpg) no-repeat center 1% / cover fixed;
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   position: relative;
   &::before {
     content: "";
@@ -17,6 +17,12 @@
     padding: 15rem 4rem 16rem 4rem;
     position: relative;
     z-index: 2;
+  }
+  @include responsive-tablet() {
+    height: 65vh;
+  }
+  @include responsive-mobile() {
+    height: 90vh;
   }
 }
 
@@ -44,6 +50,9 @@
       margin: 0 auto;
       left: 50%;
       transform: translateX(-50%);
+      @include responsive-mobile() {
+        top: 170px;
+      }
     }
     @include responsive-tablet() {
       font-size: 4.8rem;

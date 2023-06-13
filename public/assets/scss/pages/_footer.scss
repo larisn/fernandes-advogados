@@ -1,0 +1,160 @@
+
+footer {
+  background-color: $blue-card-sec3-footer;
+  padding-top: 10rem;
+  .container {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+}
+
+.container-columns {
+  padding: 0 3rem 0 5rem;
+  @include align-center();
+  align-items: normal;
+  @include responsive-tablet {
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  @include responsive-mobile {
+    display: block;
+  }
+  div:nth-child(1) {
+    border-right: 1px solid $blue-stroke-footer;
+    padding-right: 4rem;
+    @include responsive-tablet {
+      border-bottom: none;
+      border-right: none;
+      padding-bottom: 0;
+      padding: 5rem 0 4rem 0rem;
+    }
+    img {
+      width: 200px;
+    }
+    p {
+      color: $white2;
+      font-weight: 300;
+      font-size: 1.4rem;
+      max-width: 350px;
+      line-height: 28px;
+      margin: 2.5rem 0;
+    }
+    a {
+      @include align-center();
+      gap: 10px;
+      color: $white2;
+      font-weight: 400;
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      &:hover {
+        color: $white3;
+        img {
+          width: 43px;
+        }
+      }
+      img {
+        width: 40px;
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+  div:nth-child(2) {
+    border-right: 1px solid $blue-stroke-footer;
+    padding: 0 12rem 0 12rem;
+    @include responsive-tablet {
+      border-right: none;
+      border-left: 1px solid $blue-stroke-footer;
+      padding: 5rem 0 4rem 10rem;
+    }
+    @include responsive-mobile {
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid $blue-stroke-footer;
+      padding: 5rem 0 4rem 0rem;
+    }
+    h1 {
+      border-left: 2px solid $salmon;
+      padding-left: 1.5rem;
+      font: 500 2.5rem $font-main;
+      color: $white2;
+    }
+    ul {
+      list-style: disc;
+      color: $salmon;
+      margin-left: 1.5rem;
+      li {
+        padding-bottom: 2rem;
+        &:first-child {
+          margin-top: 5rem;
+        }
+        a {
+          color: $white2;
+          font-weight: 300;
+          font-size: 1.6rem;
+          transition: all .3s ease-in-out;
+          &:hover {
+            color: $salmon;
+          }
+        }
+      }
+      
+    }
+  }
+  .container-column3 {
+    padding: 0 9rem;
+    @include responsive-tablet {
+      border-top: 1px solid $blue-stroke-footer;
+      padding-top: 5rem;
+      padding-left: 0;
+    }
+    h1 {
+      border-left: 2px solid $salmon;
+      padding-left: 1.5rem;
+      font: 500 2.5rem $font-main;
+      color: $white2;
+    }
+    h3, p {
+      color: $white2;
+      font-weight: 300;
+      font-size: 1.4rem;
+      max-width: 350px;
+      line-height: 28px;
+      margin: 2.5rem 0;
+    }
+    div {
+      @include align-center();
+      gap: 8px;
+      margin-bottom: 1rem;
+      img {
+        width: 30px;
+        transition: all .3s ease-in-out;
+        &:hover {
+          width: 33px;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.container-footer {
+  max-width: 100%;
+  background-color: $blue-footer;
+  margin-top: 10rem;
+  padding: 2rem;
+  @include flexbox-center();
+  gap: 5px;
+  img {
+    width: 15px;
+  }
+  p {
+    color: $white3;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  @include responsive-mobile() {
+    text-align: center;
+  }
+}

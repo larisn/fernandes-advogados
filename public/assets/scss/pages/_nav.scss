@@ -23,6 +23,7 @@ header {
             color: $white-nav;
             position: relative;
             font-size: 1.8rem;
+            transition: all .3s ease-in-out;
             &:hover {
               color: $salmon;
             }
