@@ -1,7 +1,6 @@
 
 #s-contact-questions {
   background-color: $bg-white;
-  padding-top: 20rem;
   padding: 20rem 0 20rem 0;
   .container {
     margin: 0 auto;
@@ -20,7 +19,7 @@
 .container-card {
   position: relative;
   z-index: 2;
-  padding: 12rem 7.5rem 3rem 7.5rem;
+  padding: 12rem 7.5rem 0rem 7.5rem;
   background-color: $blue-bg-left-side;
   @include responsive-tablet() {
     padding-bottom: 8rem;
@@ -76,6 +75,7 @@
   padding: 3rem 3.5rem 1.8rem 3.5rem;
   margin-bottom: 3rem;
   border-radius: 3px;
+  position: relative;
   cursor: pointer;
   div {
     @include flexbox-between();
@@ -97,11 +97,14 @@
     max-width: 600px;
     line-height: 30px;
     margin-bottom: 1rem;
+    padding: 3.5rem 0 2.5rem 0;
   }
 }
 
-.container-questions .answer.closed {
-  display: none;
+.container-questions .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 
@@ -112,7 +115,7 @@
   background: url(/public/assets/img/bg-questions-contact.png) no-repeat center center / cover;
   width: 750px;
   position: relative;
-  height: 1000px;
+  height: 980px;
   overflow: hidden;
   &::before {
     content: "";
@@ -125,6 +128,13 @@
   @include responsive-tablet {
     width: 100%;
   }
+}
+
+.icon {
+  font-size: 3rem;
+  font-weight: 300;
+  color: $salmon;
+  transform: translateY(-5px);
 }
 
 .title-contact {

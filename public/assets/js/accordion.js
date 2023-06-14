@@ -1,16 +1,20 @@
-
 const accordionQuestions = document.querySelectorAll(".container-questions");
 
 accordionQuestions.forEach((accordion) => {
   const header = accordion.querySelector(".accordion-header");
   const answer = accordion.querySelector(".answer");
-  
+  const icon = header.querySelector(".icon");
+
   header.addEventListener("click", () => {
     const isOpen = accordion.classList.contains("open");
     closeAllQuestions();
     if (!isOpen) {
       accordion.classList.add("open");
+      answer.style.maxHeight = answer.scrollHeight + "px";
       answer.classList.remove("closed");
+      icon.innerHTML = "-";
+    } else {
+      icon.innerHTML = "+";
     }
   });
 
@@ -22,6 +26,7 @@ accordionQuestions.forEach((accordion) => {
 
       if (!isOpen) {
         accordion.classList.add("open");
+        answer.style.maxHeight = answer.scrollHeight + "px";
         answer.classList.remove("closed");
       }
     }
@@ -30,12 +35,13 @@ accordionQuestions.forEach((accordion) => {
 
 function closeAllQuestions() {
   const openQuestions = document.querySelectorAll(".container-questions.open");
-  const openAnswers = document.querySelectorAll(".container-questions .answer:not(.closed)");
-  
+
   openQuestions.forEach((question) => {
+    const answer = question.querySelector(".answer");
+    const icon = question.querySelector(".icon");
     question.classList.remove("open");
-  });
-  openAnswers.forEach((answer) => {
+    answer.style.maxHeight = null;
     answer.classList.add("closed");
+    icon.innerHTML = "+";
   });
 }
